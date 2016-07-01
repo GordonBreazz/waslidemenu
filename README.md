@@ -149,7 +149,7 @@ URLs ```'/dont-load/'``` and ```'#pleasedontloadme'``` will not load in ```loadC
 
 ```javascript
 $('#menu').waSlideMenu({
-    excludeClass : 'donload'
+    excludeClass : 'dontload'
 });
 ```
 
