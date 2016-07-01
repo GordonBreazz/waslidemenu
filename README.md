@@ -125,7 +125,7 @@ $('#menu').waSlideMenu({
 
 By default ```0``` - no min-height.
 
-#### Menu auto height 
+#### Menu auto height
 
 ```javascript
 $('#menu').waSlideMenu({
@@ -143,7 +143,17 @@ $('#menu').waSlideMenu({
 });
 ```
 
-URLs ```'/dont-load/'``` and ```'#pleasedontloadme'``` will not load in ```loadContainer```. By default ```['/', '#']```. 
+URLs ```'/dont-load/'``` and ```'#pleasedontloadme'``` will not load in ```loadContainer```. By default ```['/', '#']```.
+
+#### Class exception
+
+```javascript
+$('#menu').waSlideMenu({
+    excludeClass : 'donload'
+});
+```
+
+Link with class ```'dontload'``` will ignore clicks. By default ```''```.
 
 #### Load content only latest nested menu items
 
@@ -193,7 +203,7 @@ $('#menu').waSlideMenu({
 });
 ```
 
-By default ```0```. 
+By default ```0```.
 Sometimes after sliding to nested menu or back menu items disappear from visible area. In this case page will slide up to current menu item (selected item).
 
 #### Callbacks
@@ -327,7 +337,7 @@ $('#menu').on('onInit.waSlideMenu', function(){
             </div>
         </div>
         <div class="item"><a href="#2">2</a></div>
-        <div class="item"><a href="#3">3</a></div>        
+        <div class="item"><a href="#3">3</a></div>
     </div>
 </nav>
 <script>
