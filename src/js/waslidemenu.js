@@ -248,6 +248,10 @@
                 return false;
             }
 
+			if (base.o.excludeClass && $(element).hasClass(base.o.excludeClass)) {
+				return false;
+			}
+
             base.$currentMenuElement = $(element).parent(base.o.itemSelector);
 
             var url = $(element).attr('href'),
@@ -268,7 +272,7 @@
             }
             // add 'selected' class
             base.$currentMenuElement.addClass(base.o.selectedClass);
-            
+
             if (base.o.loadOnlyLatest === false) {
                 base.loadContent($load_container, url);
             } else if (base.o.loadOnlyLatest && $menu_children.length === 0 && depth > 0) {
@@ -392,6 +396,7 @@
         minHeightMenu       : 0,
         autoHeightMenu      : true,
         excludeUri          : ['/', '#'],
+		excludeClass        : '',
         loadOnlyLatest      : false,
         menuSelector        : 'ul',
         itemSelector        : 'li',
