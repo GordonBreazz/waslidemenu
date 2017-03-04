@@ -61,6 +61,8 @@
                         'class': base.o.classNames.menuItemBackClass
                     });
 
+				var backtitle = base.o.setTitle ? $(val).closest(base.o.itemSelector).children('a').text() : base.o.backLinkContent;
+
                 if (base.o.backOnTop) {
                     $li.prependTo($(val));
                 } else {
@@ -69,7 +71,7 @@
 
                 base.$backs.push(
                     $li.append($('<a>', {'href' : url})
-                        .html(base.o.backLinkContent))
+                        .html(backtitle))
                 );
             });
             // minimum height fix
