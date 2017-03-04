@@ -61,6 +61,7 @@
                         'class': base.o.classNames.menuItemBackClass
                     });
 
+                
 				var backtitle = base.o.setTitle ? $(val).closest(base.o.itemSelector).children('a').text() : base.o.backLinkContent;
 
                 if (base.o.backOnTop) {
